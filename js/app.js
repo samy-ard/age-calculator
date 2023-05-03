@@ -50,7 +50,7 @@
 		}
 		
 		var data = $('#day').val() + '/' + $('#month').val() + '/' + $('#year').val();
-		if( data.length == 10 && $('.error').length == 0 ) {
+		if( data.length == 10 && $('.has-error').length == 0 ) {
 			calculateTimeDiff(data);
 		}
 	}
