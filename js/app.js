@@ -93,6 +93,13 @@
 			checkDate($field);
 		});
 
+		$('.form-field').on('focusin', function(e) {
+			let $field = $(this);
+			$field.parent().find('.error').remove();
+			$field.parent().removeClass('has-error');
+			$field.removeClass('field-error');	
+		});
+
 		$('.form-field').on('focusout', function(e) {
 			let $field = $(this);
 			if( $field.val() == '' ) {
