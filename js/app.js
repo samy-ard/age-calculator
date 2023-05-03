@@ -106,7 +106,9 @@
 		$('.divider-icon').on('click', function(e) {
 			e.preventDefault();
 			var data = $('#day').val() + '/' + $('#month').val() + '/' + $('#year').val();
-			calculateTimeDiff(data);
+			if( data.length == 10 && $('.error').length == 0 ) {
+				calculateTimeDiff(data);
+			}
 		});
 	});
 })(jQuery);
